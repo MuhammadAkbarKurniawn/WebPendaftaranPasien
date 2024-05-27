@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasi RS AMC Muhammadiyah</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 400px; }
+        .button-container {
+            margin-top: 20px;
+        }
+        .back-button {
+            padding: 10px 20px;
+            background-color: #008cba;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #007196;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lokasi RS AMC Muhammadiyah</h1>
+    <div id="map"></div>
+
+    <div class="button-container">
+        <button class="back-button" onclick="goToIndex()">Kembali</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Inisialisasi peta dengan koordinat yang ditentukan
+        var map = L.map('map').setView([-7.799553, 110.351785], 15); // Koordinat RS AMC Muhammadiyah
+
+        // Menambahkan layer peta dari OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Menambahkan marker di lokasi yang ditentukan
+        L.marker([-7.799553, 110.351785]).addTo(map)
+            .bindPopup('RS AMC Muhammadiyah')
+            .openPopup();
+
+        // Fungsi untuk kembali ke halaman index.html
+        function goToIndex() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
