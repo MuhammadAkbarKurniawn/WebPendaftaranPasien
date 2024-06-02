@@ -1,9 +1,10 @@
+<!-- pendaftaranbaru.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RS AMC Muhammadiyah</title>
+    <title>RS AMC Muhammadiyah - Pendaftaran Pasien Baru</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,7 +30,7 @@
                     <li><a href="riwayat.html">Riwayat Pendaftaran</a></li>
                     <li><a href="rekammedis.html">Cek Rekam Medis</a></li>
                     <li><a href="maps.html">Maps RS AMC Muhammadiyah</a></li>
-                    <li><a id="logout" href="login.html" >Logout</a></li>
+                    <li><a id="logout" href="login.html">Logout</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,9 +38,13 @@
             <div class="login-box">
                 <img src="img/logo.png" alt="RS AMC Logo" class="login-logo">
                 <h2>Pendaftaran Pasien Baru RS AMC Muhammadiyah</h2>
-                <form action="#">
-                    <input type="number" placeholder="Masukkan No KTP/NIK" required>
-                    <button type="submit">Check No KTP/NIK</button>
+                <form id="registration-form">
+                    <input type="text" id="name" placeholder="Nama Lengkap" required>
+                    <input type="date" id="dob" placeholder="Tanggal Lahir" required>
+                    <input type="text" id="address" placeholder="Alamat" required>
+                    <input type="tel" id="phone" placeholder="Nomor Telepon" required>
+                    <input type="number" id="ktp" placeholder="Masukkan No KTP/NIK" required>
+                    <button type="submit">Daftar</button>
                 </form>
             </div>
         </div>
@@ -47,5 +52,6 @@
     <footer>
         <p>© 2024 - IT RS AMC Muhammadiyah</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
